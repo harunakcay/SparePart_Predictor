@@ -1,4 +1,5 @@
 # SparePart_Predictor
+![alt text](https://github.com/harunakcay/SparePart_Predictor/blob/main/app/static/robot.png) 
 ## Spare Part Predictor is a smart assistant for after-sales customer services that can make predictions for possible defective parts causing the error in products.
 After-sales customer services often fail to detect the component causing the problem of their customers' products. 
 Research shows that the probability of services detecting the defective part of a product based on its fault report is 40%, meaning there occurs average of 2.5 visits per any malfunction. 
