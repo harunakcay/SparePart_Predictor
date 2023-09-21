@@ -19,7 +19,7 @@ production date (PRD_YEAR), cost group (ZRPRGRP), price group (PRICE_GRP), brand
 Using these attributes, an XGB Classifier model was trained and tuned with the optimal hyperparameters. 
 Eventually, when a user enters the desired information of a fault report, the Predictor makes a prediction based on its trained model. 
 The prediction is displayed on interface of customer service, and the customer's problem is hopefully solved within one service visit.
-
+For more information about the model or project itself, see https://colab.research.google.com/drive/1P5gy1lcj_DZ28hO6OF_s0eh87OIMLRSo?usp=sharing
 
 # Deployment
 
