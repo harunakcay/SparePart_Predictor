@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+
+
+.w3-content .w3-third .robot img{
+    height: 350px;
+    padding-left: 30%;
+    
+}
+.question{
+  padding-right: 45%;
+}
+.hidden{
+  display: none;
+  margin: 0 auto;
+}
+.robot_logo img{
+  height: 45px;
+  float: right;
+  padding-right: 10px;
+  padding-top: 4px;
+}
+.tb {
+    margin-bottom: 5px;
+    border: 2px solid #000000; /* Border color */
+    background-color: #f4eded; /* Background color */
+    color: #333; /* Text color */
+    padding: 10px; /* Spacing inside the textbox */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Text font size */
+    outline: none; /* Remove the default focus outline */
+    transition: border-color 0.3s ease-in-out; /* Smooth border color transition on hover and focus */
+    
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <div class="robot_logo">
+      <img src="{{url_for('static', filename='robot_logo.png')}}" />
+    </div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-container w3-red w3-center" style="padding:58px 16px 128px 16px">
+  <h1 class="w3-margin w3-jumbo">Spare Part Predictor</h1>
+  <p class="w3-xlarge">tell us about your faulty product <br> & <br> find out which spare part is needed </p>
+  <button id="showTextboxesButton" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+  <form action="" method="post">
+    <div id="textboxes" class="hidden">
+    <input type="number" placeholder="PRICE_GRP" name="PRICE_GRP" class="tb">
+    <input type="text" placeholder="ZCRMPRD" name="ZCRMPRD" class="tb">
+    <input type="text" placeholder="ZPRDHYR8" name="ZPRDHYR8" class="tb">
+    <input type="number" placeholder="ZRPRGRP" name="ZRPRGRP" class="tb">
+    <input type="text" placeholder="ZSIKAYET" name="ZSIKAYET" class="tb">
+    <input type="number" placeholder="ZURNTIP" name="ZURNTIP" class="tb">
+    <input type="text" placeholder="ZZMARKA" name="ZZMARKA" class="tb">
+    <input type="number" placeholder="PRD_YEAR" name="PRD_YEAR" class="tb">
+    <input type="number" placeholder="USAGE" name="USAGE" class="tb">
+
+    <p><input class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit" value="Submit" id="'submitButton"/></p>
+    </div>
+
+</form>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>What is Spare Part Predictor?</h1>
+      <h5 class="w3-padding-32">Spare Part Predictor is a smart assistant for after-sales customer services that can make predictions
+        for possible defective parts causing the error in products.</h5>
+
+      <p class="w3-text-grey">After-sales customer services often fail to detect the component causing the problem of their customers' products.
+        Research shows that the probability of services detecting the defective part of a product based on its fault report is 40%, meaning there occurs
+        average of 2.5 visits per any malfunction. This inefficiency does not only lead to increasing sales operational costs, but it also results in
+        unsatisfied customers and hence tarnishing reputations of companies. In order to combat this issue, we propose you <b>Spare Part Predictor</b>: 
+        a smart model that can anticipate the problematic part of a product given its fault report.
+        The model reads the entries of the fault report and suggests two possible spare parts that the faulty product may need, in only few seconds.
+        Test results show that the model is able to predict the correct spare part in its first attempt with 68% probability, decreasing the 
+        average number of visits per malfunction to 1.5 visits/malfunction. In addition, when the model's secondary prediction is also 
+        considered, the accuracy becomes more than 85. To sum up, Spare Part Predictor aims to provide a fast and good quality service to customers
+        having problems with thier products.
+        </p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="robot">
+        <img src="{{url_for('static', filename='robot.png')}}" />
+      </div>
+        
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <div class="question">
+        <img src="{{url_for('static', filename='question.png')}}" />
+      </div>
+        
+    </div>
+
+    <div class="w3-twothird">
+      <h1>How Does The Predictor Work</h1>
+
+      <p class="w3-text-grey">The Predictor was trained with a dataset containing 3500 fault reports. Each attribute of the dataset
+        was analyzed and its correlation with the corresponding spare part is examined. Based on the results, it was observed that the 
+        defective part of a product has a strong correlation with the product's detailed expression (ZPRDHYR8), product's code (ZCRMPRD) 
+        and the customer's complaint about the product (ZSIKAYET). Additionally, relatively weaker but not neglectable correlations with 
+        product's usage duration (USAGE), production date (PRD_YEAR), cost group (ZRPRGRP), price group (PRICE_GRP), brand (ZZMARKA) 
+        and product type (ZURNTIP) were seen. Using these attributes, an XGB Classifier model was trained and tuned with the optimal hyperparameters.
+        Eventually, when a user enters the desired information of a fault report, the Predictor makes a prediction based on its trained model.
+        The prediction is displayed on interface of customer service, and the customer's problem is hopefully solved within one service visit.
+        
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
+    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ 
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+const showTextboxesButton = document.getElementById('showTextboxesButton');
+const textboxes = document.getElementById('textboxes');
+const submitButton = document.getElementById('submitButton')
+
+showTextboxesButton.addEventListener('click', () => {
+  // Hide the button
+  showTextboxesButton.style.display = 'none';
+  
+  // Show the textboxes
+  textboxes.style.display = 'block';
+});
+
+submitButton.addEventListener('click', () => {
+  // Hide the button
+  submitButton.style.display = 'none';
+  
+  textboxes.style.display = 'none';
+});
+
+
+
+</script>
+
+</body>
+</html>
