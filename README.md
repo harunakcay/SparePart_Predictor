@@ -27,12 +27,12 @@ The prediction is displayed on interface of customer service, and the customer's
 
 1. Download the content and run it.
 2. Install Flask
-   ```
-   !pip install flask
-   ```
+```
+!pip install flask
+```
 4. Run the following code in terminal:
-  ```
-  flask run
-  ```
+```
+flask run
+```
 3. Fill the boxes with intended info
 4. See the Predictions
