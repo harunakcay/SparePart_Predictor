@@ -26,7 +26,11 @@ The prediction is displayed on interface of customer service, and the customer's
 # Deployment
 
 1. Download the content and run it.
-2. Run the following code in terminal:
+2. Install Flask
+   ```
+   !pip install flask
+   ```
+4. Run the following code in terminal:
   ```
   flask run
   ```
